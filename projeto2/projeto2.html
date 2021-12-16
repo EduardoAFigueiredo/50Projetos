@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Progress steps</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: 'Muli', sans-serif;
+            margin:0px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+
+        .container .progress-container{
+            display: flex;
+            position: relative;
+
+            justify-content: space-between;
+        }
+
+
+
+        .container .progress-container .circle{
+            height: 30px;
+            width: 30px;
+            border: 2px solid #e0e0e0;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+
+        .container .progress-container:nth-of-type(1){
+            margin-left: 0px;
+        }
+
+        .container .botoes{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container .botoes .prox{
+            margin:20px 0px 0px 0px;
+        }
+
+        .container .botoes button{
+            margin:20px 5px 0px 0px;
+            padding: 8px 20px;
+            background-color:blueviolet;
+            border: 0;
+            border-radius: 6px;
+            color: white;
+            cursor: pointer;
+        }
+
+        .botoes button:active{
+            transform: scale(0.95);
+        }
+
+        .botoes button:focus{
+            outline: 0;
+        }
+
+        .botoes .prox.disabled{
+            background-color: #e0e0e0;
+            cursor: not-allowed;
+        }
+
+        .botoes .ant.disabled{
+            background-color: #e0e0e0;
+            cursor: not-allowed;
+        }
+
+        .container .progress-container::before{
+            position: absolute;
+            content: '';
+            background-color: #e0e0e0;
+            top:50%;
+            left: 0px;
+            
+            transform: translateY(-50%);
+            height: 4px;
+            width: 100%;
+            z-index: -1;
+        }
+
+        .container .progress-container .progress{
+            position: absolute;
+            background-color: #3498db;
+            top:50%;
+            left: 0px;
+            transform: translateY(-50%);
+            height: 4px;
+            width: 0%;
+            z-index: -1;
+            transition: 0.4s ease;
+        }
+
+        .container{
+            width: 250px;
+        }
+
+        .container .progress-container .circle.active{
+            border-color: #3498db;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="progress-container">
+            <div class="progress" id="progress"></div>
+            <div class="circle active">1</div>
+            <div class="circle">2</div>
+            <div class="circle">3</div>
+            <div class="circle">4</div>
+        </div>
+        <div class="botoes">
+            <button class="ant disabled" id="ant">Anterior</button>
+            <button class="prox" id="prox">Próximo</button>
+        </div>
+
+    </div>
+    <script src="/projeto2/projeto2.js"></script>
+</body>
+</html>
