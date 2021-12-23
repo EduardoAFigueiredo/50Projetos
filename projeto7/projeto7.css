@@ -1,0 +1,106 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin:0;
+    height: 100vh;
+    width: 100vw;
+
+}
+
+.container{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background: #333;
+    position: relative;
+}
+
+.playstation{
+    width: 50%;
+    height: 100%;
+    background: url('/projeto7/ps.jpg') no-repeat left center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    transition: 0.8s;
+}
+
+
+
+.xbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: 0.8s;
+    position: absolute;
+    right: 0;
+}
+
+.playstation::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(87, 84, 236, 0.7);
+    transition: 0.8s ;
+}
+
+.xbox::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(43, 43, 43, 0.8);
+    transition: 0.8s;
+}
+
+.playstation h1, .xbox h1{
+    font-size: 54px;
+    color: white;
+    z-index: 1;
+}
+
+.playstation button, .xbox button{
+    z-index: 1;
+    height: 50px;
+    width: 200px;
+    font-size: 18px;
+    background: transparent;
+    border: 1px solid white;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.playstation button:hover, .xbox button:hover{
+    background-color: rgba(0, 183, 255, 0.8);;
+}
+
+
+.xbox{
+    width: 50%;
+    height: 100%;
+    background: url('/projeto7/xbox.jpg') no-repeat left center/cover;
+}
+
+.hover-left .left{
+    width: 75%;
+}
+
+.hover-left .right{
+    width: 25%;
+}
+
+.hover-right .left{
+    width: 25%;
+}
+
+.hover-right .right{
+    width: 75%;
+}
