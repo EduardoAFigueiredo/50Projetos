@@ -77,11 +77,10 @@ body{
     border-bottom-color: lightblue; 
 }
 
-.container .login form .conjunto input:focus + label span, .container .login form .conjunto input:valid + label span{
+.conjunto input:focus + label span,  .conjunto input:valid + label span{
     color: lightblue; 
     transform: translateY(-30px);
 } 
-
 
 .container .login form .conjunto label span{
     min-width: 5px;

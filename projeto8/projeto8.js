@@ -1,6 +1,3 @@
-const inputE = document.querySelector('#email')
-const inputS = document.querySelector("#senha")
-
 const labels = document.querySelectorAll('label')
 
 
