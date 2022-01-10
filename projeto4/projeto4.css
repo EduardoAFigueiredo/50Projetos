@@ -1,0 +1,54 @@
+body{
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(75, 35, 168);
+}
+
+.botao button{
+    height: 60px;
+    width: 50px;
+    cursor: pointer;
+    border:0px;
+    background-color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+}
+
+.botao button:focus, .botao input:focus{
+    outline: none;
+}
+
+.botao button:hover{
+    background-color: rgb(21, 29, 134);
+}
+
+.botao button i{
+    font-size: 24px;
+}
+
+.botao input{
+    height: 40px;
+    padding: 10px;
+    border: 0;
+    font-size: 16px;
+    width: 30px;
+    transition: width 0.3s ease;
+}
+
+.botao{
+    position: relative;
+}
+
+.botao.active input{
+    width: 200px;
+}
+
+.botao.active button{
+    transform: translateX(220px);
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            height: calc(100vh - 30px);
+            font: 600 14px/17px sans-serif;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        h1 {
+            color: rgb(224, 77, 77);
+
+        }
+        .area {
+            width: 60%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+
+        .area a {
+            text-align: center;
+            margin: 10px;
+            background-color: rgb(224, 77, 77);
+            border: 1px solid rgb(224, 77, 77);
+            text-decoration: none;
+            color: #fff;
+            padding: 10px 16px;
+            border-radius: 5px;
+            box-shadow: 0;
+            transition: background-color .3s, box-shadow .3s;
+        }
+        .area a:hover {
+            color: rgb(224, 77, 77);
+            background-color: #fff;
+            border-color: rgb(224, 77, 77);
+            box-shadow: 0 0 10px rgb(224, 77, 77);          
+        }
+        @media (max-width: 600px) {
+            .area {
+                width: 80%;
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Acompanhamento do curso</h1>
+    <div class="area">
+        <a href="projeto1/projeto1.html">Projeto 1</a>
+        <a href="projeto1/projeto1.html">Projeto 2</a>
+        <a href="projeto1/projeto1.html">Projeto 3</a>
+        <a href="projeto1/projeto1.html">Projeto 4</a>
+        <a href="projeto1/projeto1.html">Projeto 5</a>
+        <a href="projeto1/projeto1.html">Projeto 6</a>
+        <a href="projeto1/projeto1.html">Projeto 7</a>
+    </div>
+
+</body>
+</html>
