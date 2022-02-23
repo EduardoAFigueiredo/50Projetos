@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+* {
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto Mono', sans-serif;
+    display: flex;
+    margin: 0;
+    height: 100vh;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(0, 118, 197);
+}
+
+.potePrincipal{
+    display: flex;
+    color: #fff;
+    flex-direction: column;
+    align-items: center;
+}
+
+.potePrincipal .potaoFora{
+    border: 3px solid #1F5BB2;
+    background-color: white;
+    color: #1F5BB2;
+    width: 160px;
+    height: 280px;
+    border-radius: 0px 0px 30px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.potePrincipal .potaoFora .potao{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex:1;
+    
+}
+
+.potePrincipal .potao .l{
+    font-weight: bold;
+    font-size: large;
+    margin: 0;
+}
+
+.potePrincipal .potao .rema{
+    margin: 0;
+}
+
+.potePrincipal h1{
+    margin-bottom: 0;
+}
+
+.potesMenores{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.potesMenores .potes{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.potesMenores .potes .poteMenor{
+    margin: 5px 5px;
+    border: 3px solid #1F5BB2;
+    color: #1F5BB2;
+    background-color: white;
+    width: 40px;
+    height: 70px;
+    border-radius: 0px 0px 10px 10px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.potesMenores .potes .poteMenor p{
+    margin: 0;
+}
+
+.potesMenores .potes .poteMenor.active{
+    background-color: #59A7F8;
+    color: white;
+}
+
+.potePrincipal .porcentagem{
+    background-color: #59A7F8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: 0.3s ease;
+    font-weight: bold;
+    font-size: 30px;
+    height: 0;
+}
